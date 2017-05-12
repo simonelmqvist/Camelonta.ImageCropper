@@ -1,0 +1,37 @@
+﻿{
+  "propertyEditors": [
+    {
+      "alias": "Camelonta.ImageCropper",
+      "name": "Camelonta.ImageCropper",
+      "icon": "icon-map-location",
+      "editor": {
+        "view": "~/App_Plugins/Camelonta.ImageCropper/ImageCropper.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Width",
+            "description": "Enter the pixel width of the crop",
+            "key": "width",
+            "view": "number"
+          },
+          {
+            "label": "Height",
+            "description": "Enter the pixel height of the crop",
+            "key": "height",
+            "view": "number"
+          }
+        ] 
+      }
+    }
+  ],
+
+  "javascript": [
+    "~/App_Plugins/Camelonta.ImageCropper/ImageCropper.controller.js"
+  ],
+
+  "css": [
+    "~/App_Plugins/property-editors.css?v=1",
+    "~/App_Plugins/Camelonta.ImageCropper/ImageCropper.css?v=1"
+  ]
+}

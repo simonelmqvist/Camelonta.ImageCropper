@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.9</version>
+    <authors>Camelonta AB</authors>
+    <owners>Camelonta AB</owners>
+    <id>CamelontaImageCropper</id>
+    <title>Camelonta Umbraco ImageCropper</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ImageCropper for Umbraco</description>
+    <copyright>Copyright Camelonta AB 2017</copyright>
+  </metadata>
+  <files>
+    <file src="Camelonta.ImageCropper\bin\Camelonta.ImageCropper.dll" target="lib" />
+    <file src="Camelonta.ImageCropper\App_Plugins\Camelonta.ImageCropper\*.*" target="content\App_Plugins\Camelonta.ImageCropper" />
+  </files>
+</package>
