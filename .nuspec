@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>0.9.1</version>
+    <version>0.9.2</version>
     <authors>Camelonta AB</authors>
     <owners>Camelonta AB</owners>
     <id>CamelontaImageCropper</id>
@@ -12,7 +12,6 @@
   </metadata>
   <files>
     <file src="Camelonta.ImageCropper\bin\Camelonta.ImageCropper.dll" target="lib" />
-    <file src="Camelonta.ImageCropper\App_Plugins\Camelonta.ImageCropper\*.*" target="content\App_Plugins\Camelonta.ImageCropper" />
-    <file src="Camelonta.ImageCropper\App_Plugins\Camelonta.ImageCropperGrid\*.*" target="content\App_Plugins\Camelonta.ImageCropperGrid" />
+    <file src="Camelonta.ImageCropper\App_Plugins\*.*" target="content\App_Plugins\" />
   </files>
 </package>
