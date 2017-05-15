@@ -1,0 +1,75 @@
+﻿<div class="umb-editor umb-mediapicker camelonta-MediaImageCropperGrid" ng-controller="Camelonta.MediaImageCropperGridController">
+    
+    <a href="javascript:void(0);" class="cam_mediaimagepicker" ng-click="selectContent()" ng-if="!imageSrc">
+        <i class="icon icon-picture"></i>
+    </a>
+
+    <div ng-if="imageSrc">
+
+        <div class="imagecropper clearfix">
+
+            <!--during cropping-->
+            <div ng-if="control.MediaImageCropperGrid.currentCrop" style="float: left; max-width: 100%;" class="clearfix">
+                <div class="umb-cropper__container">
+
+                    <i ng-click="done()" class="icon icon-delete btn-round umb-close-cropper"></i>
+
+                    <div>
+                        <umb-image-crop height="{{control.MediaImageCropperGrid.currentCrop.height}}"
+                                        width="{{control.MediaImageCropperGrid.currentCrop.width}}"
+                                        crop="control.MediaImageCropperGrid.currentCrop.coordinates"
+                                        center="model.value.focalPoint"
+                                        max-size="450"
+                                        src="imageSrc">
+                        </umb-image-crop>
+                    </div>
+
+                    <a href style="margin: auto; text-align: center; font-size: 11px;" class="btn btn-link red"
+                       ng-click="control.MediaImageCropperGrid.currentCrop.coordinates = undefined; done()">
+                        <localize key="imagecropper_reset">Reset</localize>
+                    </a>
+                </div>
+            </div>
+
+
+            <!--image, text and clear button-->
+            <div ng-if="!control.MediaImageCropperGrid.currentCrop" class="umb-cropper-imageholder clearfix">
+                <umb-image-gravity
+                    src="imageSrc"
+                    center="model.value.focalPoint"
+                    on-image-loaded="imageLoaded">
+                </umb-image-gravity>
+
+                <div class="caption-container">
+                    <input type="text" ng-model="control.MediaImageCropperGrid.caption" placeholder="Image caption..."/>
+                </div>
+
+                <a href class="btn btn-link btn-crop-delete" ng-click="clear()">
+                    <i class="icon-delete red"></i>
+                    Clear
+                </a>
+            </div>
+
+
+            <!--thumbnails-->
+            <ul class="umb-sortable-thumbnails cropList clearfix">
+                <li ng-repeat=" (key,value) in control.MediaImageCropperGrid.crops" ng-class="{'current':control.MediaImageCropperGrid.setCrop.alias === value.alias}" ng-click="crop(value)">
+                    <umb-image-thumbnail center="model.value.focalPoint"
+                                         crop="value.coordinates"
+                                         src="imageSrc"
+                                         height="{{value.height}}"
+                                         width="{{value.width}}"
+                                         max-size="75">
+                    </umb-image-thumbnail>
+
+                    <div class="crop-information">
+                        <span class="crop-name crop-text">{{value.alias}}</span>
+                        <span class="crop-size crop-text">{{value.width}}px x {{value.height}}px</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>

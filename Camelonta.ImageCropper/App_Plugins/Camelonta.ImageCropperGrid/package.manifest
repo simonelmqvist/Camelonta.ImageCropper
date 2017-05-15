@@ -1,0 +1,19 @@
+﻿{
+  "gridEditors": [
+    {
+        "name": "Bild med crop",
+        "alias": "Camelonta.MediaImageCropperGrid",
+        "view": "/app_plugins/Camelonta.ImageCropperGrid/ImageCropperGrid.html",
+        "icon": "icon-pictures"
+    }
+  ],
+
+  "javascript": [
+    "~/App_Plugins/Camelonta.ImageCropperGrid/ImageCropperGrid.controller.js"
+  ],
+
+  "css": [
+    "~/App_Plugins/Camelonta.ImageCropperGrid/property-editors.css?v=1",
+    "~/App_Plugins/Camelonta.ImageCropperGrid/ImageCropperGrid.css?v=1"
+  ]
+}
