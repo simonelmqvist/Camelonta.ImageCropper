@@ -13,5 +13,6 @@
   <files>
     <file src="Camelonta.ImageCropper\bin\Camelonta.ImageCropper.dll" target="lib" />
     <file src="Camelonta.ImageCropper\App_Plugins\Camelonta.ImageCropper\*.*" target="content\App_Plugins\Camelonta.ImageCropper" />
+    <file src="Camelonta.ImageCropper\App_Plugins\Camelonta.ImageCropperGrid\*.*" target="content\App_Plugins\Camelonta.ImageCropperGrid" />
   </files>
 </package>
