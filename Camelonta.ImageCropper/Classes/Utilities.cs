@@ -9,6 +9,9 @@ namespace Camelonta.ImageCropper.Classes
         {
             var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
             var image = umbracoHelper.Media(model.Id);
+
+            if (model.SetCrop == null) return image.Url;
+
             return string.Format("{0}?crop={1},{2},{3},{4}&cropmode=percentage&width={5}&height={6}",
                 image.Url,
                 model.SetCrop.Coordinates.X1,
