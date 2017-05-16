@@ -319,10 +319,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\Camelonta.ImageCropperGrid\ImageCropperGrid.controller.js" />
+    <Content Include="App_Plugins\Camelonta.ImageCropperGrid\ImageCropperGrid.css" />
+    <Content Include="App_Plugins\Camelonta.ImageCropperGrid\ImageCropperGrid.html" />
     <Content Include="packages.config" />
     <Content Include="App_Plugins\Camelonta.ImageCropper\ImageCropper.cshtml" />
     <Content Include="App_Plugins\Camelonta.ImageCropper\package.manifest" />
     <Content Include="readme.md" />
+    <Content Include="App_Plugins\Camelonta.ImageCropperGrid\ImageCropperGrid.cshtml" />
+    <Content Include="App_Plugins\Camelonta.ImageCropperGrid\package.manifest" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -378,10 +383,8 @@
   </Target>
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetPath) C:\work\svn\Kundprojekt\Mto\Mto.Core\bin
-xcopy $(TargetPath) C:\work\svn\Kundprojekt\Mto\Mto.Test\bin
-xcopy $(TargetPath) C:\work\svn\Kundprojekt\Mto\Mto.Web\bin
-xcopy "$(ProjectDir)App_Plugins\*.*" "C:\work\svn\Kundprojekt\Mto\Mto.Web\App_Plugins\" /Y /I /E</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

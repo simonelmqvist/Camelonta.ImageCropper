@@ -10,7 +10,7 @@
 2. Deserialize the json to the CroppedImageModel class:
 CroppedImageModel myImageModel = JsonConvert.DeserializeObject<Camelonta.ImageCropper.Models.CroppedImageModel>(myCroppedImageJson);
 3. Render the image:
-<img src="@Camelonta.ImageCropper.Classes.Utilities.CroppedImageSource(myImageModel)" alt="" />
+< img src="@Camelonta.ImageCropper.Classes.Utilities.CroppedImageSource(myImageModel)" alt="" />
 
 ## Ideas for next version
 
