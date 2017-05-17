@@ -15,8 +15,8 @@ namespace Camelonta.ImageCropper.Classes
             return string.Format("{0}?crop={1},{2},{3},{4}&cropmode=percentage&width={5}&height={6}",
                 image.Url,
                 model.SetCrop.Coordinates.X1,
-                model.SetCrop.Coordinates.X2,
                 model.SetCrop.Coordinates.Y1,
+                model.SetCrop.Coordinates.X2,
                 model.SetCrop.Coordinates.Y2,
                 model.SetCrop.Width,
                 model.SetCrop.Height);
