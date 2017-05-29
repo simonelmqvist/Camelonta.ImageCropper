@@ -13,7 +13,6 @@
   ],
 
   "css": [
-    "~/App_Plugins/Camelonta.ImageCropperGrid/property-editors.css?v=1",
     "~/App_Plugins/Camelonta.ImageCropperGrid/ImageCropperGrid.css?v=1"
   ]
 }

@@ -30,8 +30,7 @@
     "~/App_Plugins/Camelonta.ImageCropper/ImageCropper.controller.js"
   ],
 
-  "css": [
-    "~/App_Plugins/property-editors.css?v=1",
+  "css": [    
     "~/App_Plugins/Camelonta.ImageCropper/ImageCropper.css?v=1"
   ]
 }
