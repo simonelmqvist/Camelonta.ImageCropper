@@ -12,7 +12,7 @@ namespace Camelonta.ImageCropper.Classes
 
             if (model.SetCrop == null) return image.Url;
 
-            return string.Format("{0}?crop={1},{2},{3},{4}&cropmode=percentage&width={5}&height={6}",
+            return string.Format(System.Globalization.CultureInfo.GetCultureInfo("en-US"), "{0}?crop={1},{2},{3},{4}&cropmode=percentage&width={5}&height={6}",
                 image.Url,
                 model.SetCrop.Coordinates.X1,
                 model.SetCrop.Coordinates.Y1,
