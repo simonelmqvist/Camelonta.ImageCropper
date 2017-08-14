@@ -53,6 +53,7 @@ angular.module('umbraco').controller("Camelonta.ImageCropperController", functio
         //crop a specific crop
         $scope.clear = function (crop) {
             $scope.imageSrc = undefined;
+            $scope.model.value = undefined;
         };
 
         $scope.imageLoaded = function () {
